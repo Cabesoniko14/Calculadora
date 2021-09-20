@@ -9,7 +9,7 @@ import java.util.Arrays;
  * @author Daniel, Javi
  */
 public class Calculadora {
-    
+    //EDITADO
     public String ConvertirPostfijo(String infijo){
         String postfijo = "";
         PilaADT<Character> aux = new PilaA<>();
