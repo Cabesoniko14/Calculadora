@@ -75,7 +75,7 @@ public class Calculadora {
             char ch = postfijo.charAt(i);
             if (esUnDigito(ch)){
                 PilitaAux.push((double) ch);
-            }
+            } 
             switch (ch) {
                 case '~' :{
                     double x = (double) PilitaAux.pop();
