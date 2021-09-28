@@ -210,7 +210,7 @@ public class Calculadora {
 						 }  	
 			   		     }	
 				if(denominador%2==1){   
-					res = Math.pow(y,x);
+					res = -1*Math.pow(y,x);
 					res = Math.pow(res,1/denominador);
 						
 				else{
