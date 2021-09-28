@@ -191,7 +191,7 @@ public class Calculadora {
 					y*=10;
 					denominador*=10;	
 				}
-				int a = x;
+				int a = (int) x;
 				int b =denominador;	   
 				   
 				while(a != 1){
@@ -213,7 +213,7 @@ public class Calculadora {
 					res = -1*Math.pow(y,x);
 					res = Math.pow(res,1/denominador);
 						
-				else{
+				}else{
 					System.out.println("Numeros negativos no tienen raices pares.");
 						}
 			   }
