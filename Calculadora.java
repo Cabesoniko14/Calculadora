@@ -183,9 +183,47 @@ public class Calculadora {
                     double y = (double) PilitaAux.pop();
                     System.out.println(x);
                     System.out.println(y);
-                    res = Math.pow(y,x);
-                    PilitaAux.push(res); 
-                    break;
+		    if(y<0){
+			   if(x < 1 && x%1 != x){
+				int denominador = 1;
+				   
+			   	while(x%1 != x){
+					y*=10;
+					denominador*=10;	
+				}
+				int a = x;
+				int b =denominador;	   
+				   
+				while(a != 1){
+				
+					while (b != 0) {
+					
+  			    	 	 if (a > b)
+       				 	    a = a - b;
+     				 	 else
+      			           	  b = b - a;
+    					   	    }
+			
+					if(a !=1){	
+						x= x/a;   
+						denominador= denominador/a;   
+						 }  	
+			   		     }	
+				if(denominador%2==1){   
+					res = Math.pow(y,x);
+					res = Math.pow(res,1/denominador);
+						
+				else{
+					System.out.println("Numeros negativos no tienen raices pares.");
+						}
+			   }
+			    
+			    
+		    }
+		    else{
+                    	res = Math.pow(y,x);
+                   	 PilitaAux.push(res); 
+                    break;}
                     }
                 }
             }
